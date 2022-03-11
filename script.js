@@ -125,3 +125,19 @@ function generatePassword() {
     console.log(userChoices);
   };
 
+// Empty variable for the password lenght
+var passwordBlank = [];
+  
+// Loop for random selection
+for (var i = 0; i < passwordLength; i++) {
+  var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+  passwordBlank.push(allChoices);
+  console.log(allChoices);
+}
+
+// Join and return the password 
+var password = passwordBlank.join("");
+console.log("Your Pasword is: " + password);
+return password;
+
+}
